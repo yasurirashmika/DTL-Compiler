@@ -1,0 +1,44 @@
+name,age,department,salary
+Victor Chang,52.0,Engineering,115000.0
+Henry Davis,45.0,Engineering,105000.0
+Noah Martin,39.0,Engineering,102000.0
+Henry Taylor,40.0,Engineering,99000.0
+Karen Taylor,41.0,Engineering,98000.0
+David Lee,44.0,Sales,92000.0
+Bella Davis,35.0,Engineering,91000.0
+Karen White,36.0,Engineering,89000.0
+Yuki Tanaka,33.0,Engineering,88000.0
+Tom Davis,43.0,Sales,87000.0
+Peter Johnson,34.0,Engineering,82000.0
+Rachel Anderson,41.0,Marketing,81000.0
+Emma Wilson,31.0,Engineering,80000.0
+Samuel Lee,31.0,Engineering,79000.0
+Maya Anderson,36.0,Sales,78000.0
+Victor Martinez,36.0,Marketing,78000.0
+Quinn Taylor,27.0,Engineering,77000.0
+Yuki Anderson,33.0,Marketing,77000.0
+Frank Garcia,38.0,Unknown,77000.0
+Maya Rodriguez,34.0,Sales,76000.0
+Olivia Garcia,39.0,Marketing,76000.0
+Zara Khan,30.0,  Marketing  ,75000.0
+Xavier Wilson,29.0,  Engineering  ,75000.0
+Alice Johnson,28.0,Engineering,75000.0
+James Miller,33.0,Marketing,74000.0
+Leo Martinez,0.0,Marketing,73000.0
+Peter Jackson,32.0,Sales,73000.0
+Uma Patel,28.0,Unknown,72000.0
+Quinn Adams,29.0,Sales,71500.0
+Grace Lee,29.0,Sales,71000.0
+Xavier Lopez,0.0,Sales,70000.0
+Diana Prince,31.0,Sales,70000.0
+Uma Johnson,26.0,Engineering,69000.0
+Adam Brown,29.0,Sales,69000.0
+Iris Chen,33.0,Unknown,69000.0
+Eve Williams,26.0,  Engineering  ,68000.0
+Samuel Brown,30.0,Unknown,68000.0
+Grace Martinez,26.0,Marketing,66000.0
+Jack Wilson,27.0,Sales,66000.0
+Bob Smith,0.0,Marketing,65000.0
+Wendy Smith,26.0,Marketing,64000.0
+Noah Thomas,25.0,Engineering,64000.0
+Leo Thomas,25.0,Unknown,63000.0

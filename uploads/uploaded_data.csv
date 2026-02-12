@@ -1,0 +1,55 @@
+COMPANY_DATA_EXPORT_2024
+Version 1.0
+name,age,department,salary,experience,hire_date,email
+Alice Johnson,28,Engineering,75000,3,2021-03-15,alice.johnson@company.com
+Bob Smith,,Marketing,65000,7,2017-06-22,bob.smith@company.com
+Charlie Brown,42,Engineering,,12,2012-01-10,charlie.brown@company.com
+Diana Prince,31,Sales,70000,,2019-05-18,diana.prince@company.com
+Eve Williams,26,  Engineering  ,68000,2,2022-01-09,eve.williams@company.com
+Frank Miller,38,Marketing,,9,2015-11-03,frank.miller@company.com
+Grace Lee,29,Sales,71000,4,2020-07-21,grace.lee@company.com
+Henry Davis,45,Engineering,105000,15,2009-02-14,henry.davis@company.com
+Iris Chen,33,,69000,6,2018-04-12,iris.chen@company.com
+Jack Wilson,27,Sales,66000,,2021-08-30,jack.wilson@company.com
+Karen Taylor,41,Engineering,98000,13,2011-09-05,karen.taylor@company.com
+Leo Martinez,,Marketing,73000,5,2019-03-22,leo.martinez@company.com
+Maya Anderson,36,Sales,78000,8,2016-12-08,maya.anderson@company.com
+Noah Thomas,25,Engineering,64000,1,2023-02-01,noah.thomas@company.com
+Olivia Garcia,39,Marketing,76000,10,2014-10-17,olivia.garcia@company.com
+Alice Johnson,28,Engineering,75000,3,2021-03-15,alice.johnson@company.com
+Peter Johnson,34,Engineering,82000,7,2017-05-19,peter.johnson@company.com
+Quinn Adams,29,Sales,71500,4,2020-06-14,quinn.adams@company.com
+Rachel Green,37,Marketing,,11,2013-04-23,rachel.green@company.com
+Samuel Lee,31,Engineering,79000,6,,samuel.lee@company.com
+Tom Wilson,45,Sales,,14,2010-01-08,tom.wilson@company.com
+Uma Patel,28,,72000,3,2021-07-19,uma.patel@company.com
+Victor Chang,52,Engineering,115000,25,1999-09-12,victor.chang@company.com
+Wendy Smith,26,Marketing,64000,2,2022-11-05,wendy.smith@company.com
+Xavier Lopez,,Sales,70000,5,2019-02-10,xavier.lopez@company.com
+Yuki Tanaka,33,Engineering,88000,8,2016-08-01,yuki.tanaka@company.com
+Zara Khan,30,  Marketing  ,75000,,2020-09-15,zara.khan@company.com
+Adam Brown,29,Sales,69000,3,2021-04-22,adam.brown@company.com
+Bella Davis,35,Engineering,91000,9,2015-07-11,bella.davis@company.com
+Chloe Johnson,27,Marketing,,2,2022-12-03,chloe.johnson@company.com
+David Lee,44,Sales,92000,12,2012-03-18,david.lee@company.com
+Emma Wilson,31,Engineering,80000,6,2018-09-09,emma.wilson@company.com
+Frank Garcia,38,,77000,10,2014-05-20,frank.garcia@company.com
+Grace Martinez,26,Marketing,66000,1,2023-01-16,grace.martinez@company.com
+Henry Taylor,40,Engineering,99000,14,2010-11-25,henry.taylor@company.com
+Isabella Anderson,29,Sales,,4,2020-02-07,isabella.anderson@company.com
+James Miller,33,Marketing,74000,7,2017-10-30,james.miller@company.com
+Karen White,36,Engineering,89000,11,2013-06-08,karen.white@company.com
+Leo Thomas,25,,63000,0,2023-09-01,leo.thomas@company.com
+Maya Rodriguez,34,Sales,76000,8,2016-04-17,maya.rodriguez@company.com
+Noah Martin,39,Engineering,102000,13,2011-08-22,noah.martin@company.com
+Olivia Thompson,28,Marketing,,5,2019-01-29,olivia.thompson@company.com
+Peter Jackson,32,Sales,73000,6,2018-03-12,peter.jackson@company.com
+Quinn Taylor,27,Engineering,77000,3,2021-02-14,quinn.taylor@company.com
+Rachel Anderson,41,Marketing,81000,15,2009-12-07,rachel.anderson@company.com
+Samuel Brown,30,,68000,4,2020-05-25,samuel.brown@company.com
+Tom Davis,43,Sales,87000,11,2013-09-03,tom.davis@company.com
+Uma Johnson,26,Engineering,69000,2,2022-08-18,uma.johnson@company.com
+Victor Martinez,36,Marketing,78000,9,2015-10-12,victor.martinez@company.com
+Wendy Garcia,38,Sales,,10,2014-07-20,wendy.garcia@company.com
+Xavier Wilson,29,  Engineering  ,75000,4,2020-11-02,xavier.wilson@company.com
+Yuki Anderson,33,Marketing,77000,7,2017-01-19,yuki.anderson@company.com

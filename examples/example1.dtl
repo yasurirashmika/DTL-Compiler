@@ -1,0 +1,8 @@
+# Example 1: Filter high-salary employees
+# This script demonstrates basic filtering and column selection
+
+load "test_data/employees.csv"
+filter salary > 70000
+select name, department, salary
+sort by salary desc
+save "test_data/high_salary_employees.csv"

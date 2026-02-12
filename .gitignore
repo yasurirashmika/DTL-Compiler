@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific
+output/*.py
+output/*.csv
+generated_output.py
+*.log

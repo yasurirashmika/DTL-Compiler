@@ -1,0 +1,10 @@
+# Example 2: Young engineers with experience
+# Filter employees from Engineering department
+
+load "test_data/employees.csv"
+filter department == Engineering
+filter age < 35
+filter experience >= 2
+select name, age, salary, experience
+sort by experience desc
+save "test_data/young_engineers.csv"

@@ -1,0 +1,8 @@
+# Example 3: Department salary analysis
+# Group by department and calculate average salary
+
+load "test_data/employees.csv"
+select department, salary
+group by department avg salary
+sort by salary desc
+save "test_data/dept_avg_salary.csv"

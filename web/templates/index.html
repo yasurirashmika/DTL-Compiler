@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTL Compiler - Web Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DTL Compiler</h1>
+            <p>Converts simple Data Transformation Language (DTL) commands into executable Python code to process and transform CSV data automatically</p>
+        </header>
+
+        <section class="card">
+            <h2>Step 1: Upload CSV File</h2>
+            <div class="upload-area">
+                <input type="file" id="csvFile" accept=".csv" style="display: none;">
+                <button onclick="document.getElementById('csvFile').click()" class="btn btn-primary">
+                    Choose CSV File
+                </button>
+                <span id="fileName" class="file-name"></span>
+            </div>
+            <div id="csvPreview" class="preview-area" style="display: none;">
+                <h3>CSV Preview (Original):</h3>
+                <div id="previewTable"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Step 2: Write DTL Script</h2>
+            <textarea id="dtlCode" placeholder="Example DTL Script:
+
+load 'uploaded_file.csv'
+filter salary > 70000
+select name, department, salary
+sort by salary desc
+save 'output.csv'
+
+Write your DTL commands here..."></textarea>
+
+            <button onclick="compileDTL()" class="btn btn-success">Compile & Run</button>
+        </section>
+
+        <section class="card" id="resultsSection" style="display: none;">
+            <h2>Results & Output</h2>
+            
+            <div id="statusMessage"></div>
+            
+            <div class="result-box">
+                <h3>Generated Python Code:</h3>
+                <pre id="pythonCode" class="code-display"></pre>
+                <button onclick="downloadFile('python')" class="btn btn-secondary">
+                    Download .py Script
+                </button>
+            </div>
+
+            <div class="result-box" id="outputDataBox" style="display: none;">
+                <h3>Output Data Preview (Cleaned Results):</h3>
+                <div id="outputTable" class="table-container"></div>
+                
+                <div class="download-actions">
+                    <button onclick="downloadFile('csv')" class="btn btn-download">
+                        Download Cleaned CSV File
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let uploadedFile = null;
+
+        // Handle file upload
+        document.getElementById('csvFile').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const formData = new FormData();
+                formData.append('csvfile', file);
+                fetch('/upload', { method: 'POST', body: formData })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        uploadedFile = data.filename; // Dynamic filename capture
+                        document.getElementById('fileName').textContent = file.name;
+                        displayTable(data.preview, 'previewTable', 'csvPreview');
+                    } else {
+                        alert('Upload failed: ' + data.error);
+                    }
+                });
+            }
+        });
+
+        function compileDTL() {
+            const code = document.getElementById('dtlCode').value;
+            if (!uploadedFile) return alert("Upload a file first!");
+            
+            fetch('/compile', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ dtl_code: code, filename: uploadedFile })
+            })
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('resultsSection').style.display = 'block';
+                if (data.success) {
+                    document.getElementById('statusMessage').innerHTML = '<div class="success">✓ Compilation & Execution Successful!</div>';
+                    document.getElementById('pythonCode').textContent = data.python_code;
+                    
+                    // Display warnings if any
+                    if (data.warnings && data.warnings.length > 0) {
+                        const warningHtml = '<div class="warning" style="margin-top:10px; padding:10px; background:#fff3cd; border-left:4px solid #ffc107;"><strong>Warnings:</strong><ul>' +
+                            data.warnings.map(w => `<li>${w}</li>`).join('') +
+                            '</ul></div>';
+                        document.getElementById('statusMessage').innerHTML += warningHtml;
+                    }
+                    
+                    // Display result table and download button if data exists
+                    if (data.output_data) {
+                        displayTable(data.output_data, 'outputTable', 'outputDataBox');
+                    } else {
+                        document.getElementById('outputDataBox').style.display = 'none';
+                    }
+                } else {
+                    // Display error with detailed messages
+                    let errorDisplay = `<div class="error"><strong>Error:</strong><pre style="white-space:pre-wrap; word-break:break-word;">${data.error}</pre></div>`;
+                    document.getElementById('statusMessage').innerHTML = errorDisplay;
+                    document.getElementById('outputDataBox').style.display = 'none';
+                }
+                document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+            })
+            .catch(err => alert('Request failed: ' + err.message));
+        }
+
+        function displayTable(data, tableId, boxId) {
+            let html = `<table><thead><tr>${data.columns.map(c => `<th>${c}</th>`).join('')}</tr></thead>`;
+            html += `<tbody>${data.rows.map(r => `<tr>${data.columns.map(c => `<td>${r[c]}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+            document.getElementById(tableId).innerHTML = html;
+            document.getElementById(boxId).style.display = 'block';
+        }
+
+        function downloadFile(type) { 
+            // Triggers the download route in your Flask app.py
+            window.location.href = `/download/${type}`; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+transaction_id,date,customer_id,product_name,quantity,unit_price,total_amount,region,payment_method,status
+TXN001,2024-01-05,CUST001,Laptop,1,1200.00,1200.00,North America,Credit Card,Completed
+TXN002,2024-01-06,CUST002,Mouse,5,25.50,,North America,Debit Card,Completed
+TXN003,2024-01-07,CUST003,Keyboard,,45.00,225.00,  Europe  ,Credit Card,Completed
+TXN004,2024-01-08,CUST001,Monitor,2,350.00,,,North America,PayPal,Pending
+TXN005,2024-01-09,CUST004,USB Cable,10,5.99,59.90,Asia,,Completed
+TXN006,2024-01-10,CUST005,Headphones,3,89.99,269.97,Europe,Credit Card,Completed
+TXN007,2024-01-11,CUST002,,2,299.99,599.98,North America,Debit Card,Cancelled
+TXN008,2024-01-12,CUST006,Webcam,1,75.00,75.00,Asia,Credit Card,Completed
+TXN009,2024-01-13,CUST001,SSD 1TB,,199.99,1199.94,North America,PayPal,Completed
+TXN010,2024-01-14,CUST007,Monitor Stand,4,24.99,99.96,Europe,Credit Card,Completed
+TXN011,2024-01-15,CUST003,Laptop,1,1150.00,,Europe,,Pending
+TXN012,2024-01-16,CUST008,Mouse Pad,8,12.50,100.00,Asia,Debit Card,Completed
+TXN013,2024-01-17,CUST004,,3,199.99,599.97,North America,Credit Card,Completed
+TXN014,2024-01-18,CUST005,Keyboard,2,55.00,110.00,  Europe  ,PayPal,Completed
+TXN015,2024-01-19,CUST002,Monitor,1,,350.00,North America,Credit Card,Completed
+TXN016,2024-01-20,CUST006,USB Hub,5,19.99,99.95,Asia,Debit Card,Completed
+TXN017,2024-01-21,CUST001,Laptop Stand,,45.00,135.00,North America,Credit Card,Completed
+TXN018,2024-01-22,CUST009,Headphones,2,89.99,179.98,Europe,Credit Card,Completed
+TXN019,2024-01-23,CUST007,Keyboard,1,49.99,49.99,Asia,,Completed
+TXN020,2024-01-24,CUST003,,2,299.99,599.98,North America,PayPal,Completed
+TXN020,2024-01-24,CUST003,Laptop Bag,2,299.99,599.98,North America,PayPal,Completed
+TXN021,2024-01-25,CUST008,Monitor,1,375.00,375.00,Europe,Credit Card,Pending
+TXN022,2024-01-26,CUST004,USB Cable,15,5.99,89.85,  Asia  ,Debit Card,Completed
+TXN023,2024-01-27,CUST005,Laptop,1,1100.00,,North America,Credit Card,Completed
+TXN024,2024-01-28,CUST002,Webcam,2,,149.98,Europe,PayPal,Completed
+TXN025,2024-01-29,CUST006,,3,89.99,269.97,Asia,Credit Card,Completed
+TXN026,2024-01-30,CUST001,Mouse,10,25.50,255.00,North America,Debit Card,Completed
+TXN027,2024-02-01,CUST009,Keyboard,2,55.00,110.00,Europe,,Completed
+TXN028,2024-02-02,CUST007,Monitor,1,350.00,350.00,Asia,Credit Card,Completed
+TXN029,2024-02-03,CUST008,,2,199.99,399.98,North America,Credit Card,Pending
+TXN030,2024-02-04,CUST003,Headphones,3,89.99,269.97,Europe,PayPal,Completed
+TXN031,2024-02-05,CUST004,Laptop,1,,1149.99,Asia,Debit Card,Completed
+TXN032,2024-02-06,CUST005,USB Hub,6,19.99,119.94,North America,Credit Card,Completed
+TXN033,2024-02-07,CUST002,Monitor Stand,2,24.99,49.98,  Europe  ,Credit Card,Completed
+TXN034,2024-02-08,CUST006,,5,25.50,127.50,Asia,PayPal,Completed
+TXN035,2024-02-09,CUST001,Keyboard,1,49.99,49.99,North America,,Completed
+TXN036,2024-02-10,CUST009,Webcam,1,75.00,75.00,Europe,Debit Card,Completed
+TXN037,2024-02-11,CUST007,Laptop,1,1200.00,,Asia,Credit Card,Pending
+TXN038,2024-02-12,CUST008,Mouse Pad,10,12.50,125.00,North America,Credit Card,Completed
+TXN039,2024-02-13,CUST003,,3,89.99,269.97,Europe,,Completed
+TXN040,2024-02-14,CUST004,Monitor,2,375.00,750.00,Asia,Credit Card,Completed
+TXN041,2024-02-15,CUST005,Headphones,2,,179.98,North America,PayPal,Completed
+TXN042,2024-02-16,CUST002,USB Cable,12,5.99,71.88,  Europe  ,Debit Card,Completed
+TXN043,2024-02-17,CUST006,Keyboard,1,55.00,55.00,Asia,Credit Card,Completed
+TXN044,2024-02-18,CUST001,,2,199.99,399.98,North America,Credit Card,Completed
+TXN045,2024-02-19,CUST009,Laptop,1,1150.00,1150.00,Europe,PayPal,Completed
+TXN046,2024-02-20,CUST007,Monitor Stand,3,24.99,74.97,Asia,Credit Card,Pending
+TXN047,2024-02-21,CUST008,,5,19.99,99.95,North America,,Completed
+TXN048,2024-02-22,CUST003,Webcam,1,75.00,75.00,Europe,Credit Card,Completed
+TXN049,2024-02-23,CUST004,Mouse,8,,200.00,Asia,Debit Card,Completed
+TXN050,2024-02-24,CUST005,Keyboard,2,49.99,99.98,North America,Credit Card,Completed
