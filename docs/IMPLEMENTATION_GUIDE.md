@@ -39,10 +39,10 @@
    - Add `__repr__` methods for debugging
 
 2. **Implement `lexer.py`**
-   - Define `TokenType` enum
-   - Create `Token` class
-   - Implement `Lexer` class with tokenization logic
-   - Add pattern matching for strings, numbers, identifiers
+   - Use PLY (Python Lex-Yacc) for robust lexical analysis
+   - Define tokens, reserved words, and token functions
+   - Handle string literals, numbers, identifiers, and operators
+   - Preprocess input to remove comments and empty lines
 
 3. **Test the Lexer**
    - Write test cases
@@ -335,86 +335,6 @@ python generated_output.py
 
 ---
 
-## Pro Tips for Success
-
-### Time Management
-- **Don't perfectionist** - Get it working first, polish later
-- **Test incrementally** - Test each component before moving on
-- **Keep scope small** - Focus on core features, extensions are optional
-
-### Debugging Strategies
-1. **Print statements** - Add debug prints in each phase
-2. **Test small inputs** - Start with 1-2 line scripts
-3. **Isolate issues** - Test each module independently
-4. **Read error messages** - Pandas errors often suggest the fix
-
-### Code Quality
-- **Use meaningful names** - `parse_filter()` not `pf()`
-- **Add comments** - Explain the "why", not the "what"
-- **Consistent style** - Use same naming convention throughout
-- **Error messages matter** - Users will appreciate clear errors
-
-### Presentation Tips
-- **Show the architecture diagram** - Demonstrates understanding
-- **Live demo** - Compile and run an example script
-- **Explain trade-offs** - Why you chose this approach
-- **Discuss extensions** - Show you're thinking beyond the assignment
-
----
-
-## 📊 Estimated Time Breakdown
-
-| Day | Phase | Hours | Complexity |
-|-----|-------|-------|------------|
-| 1   | Planning & Design | 2-3 | Easy |
-| 2   | Lexer | 3-4 | Medium |
-| 3   | Parser | 4-5 | Hard |
-| 4   | Semantic | 3-4 | Medium |
-| 5   | Code Gen | 4-5 | Medium |
-| 6   | Integration & Testing | 4-5 | Medium |
-| 7   | Documentation | 3-4 | Easy |
-| **Total** | | **23-30 hours** | |
-
----
-
-## Definition of Done
-
-Your project is complete when:
-- [ ] All source files are implemented and tested
-- [ ] At least 3 example scripts compile and run successfully
-- [ ] Generated Python code executes without errors
-- [ ] Documentation is comprehensive and clear
-- [ ] Error handling provides helpful feedback
-- [ ] Code is well-commented and organized
-- [ ] You can explain each compiler phase confidently
-
----
-
-## Minimum Viable Product (MVP)
-
-If short on time, focus on:
-1. Load command
-2. Filter command (numeric comparison only)
-3. Select command
-4. Save command
-5. Basic error handling
-
-This demonstrates all compiler phases with minimal features.
-
----
-
-## Extensions (If Time Allows)
-
-1. **Add GROUP BY** - Already implemented!
-2. **Support multiple operators** - AND/OR in filters
-3. **Add JOIN** - Merge datasets
-4. **Expression evaluation** - Computed columns
-5. **Better error recovery** - Continue after errors
-6. **Optimization** - Remove redundant operations
-7. **REPL mode** - Interactive testing
-
----
-
 ## Resources
 
 ### Python Libraries
@@ -433,7 +353,3 @@ This demonstrates all compiler phases with minimal features.
 - Read about recursive descent parsing
 
 ---
-
-**Good luck with your project! 🚀**
-
-Remember: The goal is to demonstrate understanding of compiler concepts, not to build a production-ready system. Keep it simple, test frequently, and document well!

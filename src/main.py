@@ -113,12 +113,6 @@ class DTLCompiler:
 
 def main():
     """Command-line interface for the DTL Compiler"""
-    print("""
-╔════════════════════════════════════════════════════════════╗
-║         DTL Compiler - Data Transformation Language        ║
-║         Built for: University of Ruhuna Thesis             ║
-╚════════════════════════════════════════════════════════════╝
-    """)
     
     if len(sys.argv) < 2:
         print("Usage: python main.py <input_file.dtl> [options]")

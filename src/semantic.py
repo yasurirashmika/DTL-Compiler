@@ -103,7 +103,7 @@ class SemanticAnalyzer:
         
         if self.validate_columns:
             try:
-                # ✅ FIXED: Check for skip commands that come AFTER this load
+                # FIXED: Check for skip commands that come AFTER this load
                 skip_rows = 0
                 for i, cmd in enumerate(self.ast.commands):
                     if i > index:  # Only look at commands after load
@@ -256,17 +256,17 @@ class SemanticAnalyzer:
         print("\n=== SEMANTIC ANALYSIS REPORT ===")
         
         if self.errors:
-            print(f"\n❌ ERRORS ({len(self.errors)}):")
+            print(f"\nERRORS ({len(self.errors)}):")
             for error in self.errors:
                 print(f"  • {error}")
         
         if self.warnings:
-            print(f"\n⚠️  WARNINGS ({len(self.warnings)}):")
+            print(f"\nWARNINGS ({len(self.warnings)}):")
             for warning in self.warnings:
                 print(f"  • {warning}")
         
         if not self.errors and not self.warnings:
-            print("\n✅ No errors or warnings - program is semantically correct!")
+            print("\nNo errors or warnings - program is semantically correct!")
         
         return len(self.errors) == 0
 

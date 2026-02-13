@@ -24,7 +24,8 @@ The Data Transformation Language (DTL) Compiler is a domain-specific language co
 
 ### 1.3 Technology Stack
 - **Language**: Python 3.x
-- **Libraries**: pandas (data manipulation), re (regex for tokenization)
+- **Libraries**: pandas (data manipulation), ply (lexical analysis), re (regex for tokenization)
+- **Lexical Analyzer**: PLY (Python Lex-Yacc) - industrial-strength parser generator
 - **Design Pattern**: Multi-phase compiler architecture
 - **Paradigm**: Object-oriented programming
 
@@ -249,7 +250,7 @@ ERRORS (2):
   - Column 'salary' does not exist in loaded data
   - Output directory does not exist: invalid/path
 
-⚠️  WARNINGS (1):
+WARNINGS (1):
   - Program has no 'save' command - results won't be saved
 ```
 

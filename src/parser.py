@@ -112,6 +112,39 @@ class Parser:
         return RenameNode(old_name, new_name)
 
     def _parse_filter(self):
+        """Parse: filter column operator value (with strict syntax validation)"""
+        self._consume(TokenType.FILTER, "Expected 'filter'")
+        column = self._consume(TokenType.IDENTIFIER, "Expected column name").value
+        
+        # 1. Validate and capture the operator
+        op_token = self._current_token()
+        valid_operators = [
+            TokenType.GT, TokenType.LT, TokenType.GTE, 
+            TokenType.LTE, TokenType.EQ, TokenType.NEQ
+        ]
+        
+        if op_token.type not in valid_operators:
+            raise SyntaxError(f"Expected operator (>, <, ==, etc.) at line {op_token.line_number}")
+        
+        operator = op_token.value
+        self._advance()
+        
+        # 2. Explicitly validate the VALUE token
+        val_token = self._current_token()
+        
+        if val_token.type == TokenType.NUMBER:
+            value = val_token.value
+        elif val_token.type == TokenType.STRING:
+            value = f'"{val_token.value}"'
+        else:
+            # This triggers the specific Syntax Error for your screenshot
+            raise SyntaxError(
+                f"Syntax Error at line {val_token.line_number}: "
+                f"Expected Number or String after operator, but found {val_token.type.name} ('{val_token.value}')"
+            )
+        
+        self._advance()
+        return FilterNode(column, operator, value)
         """Parse: filter column operator value (Updated for NaN support)"""
         self._consume(TokenType.FILTER, "Expected 'filter'")
         column = self._consume(TokenType.IDENTIFIER, "Expected column").value

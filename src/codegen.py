@@ -81,7 +81,7 @@ class CodeGenerator:
         filename = self._clean_string(node.filename)
         self.code_lines.append(f"# Load data from CSV")
         
-        # ✅ CRITICAL FIX: Use skiprows parameter in read_csv
+        # CRITICAL FIX: Use skiprows parameter in read_csv
         if self.skip_rows > 0:
             self.code_lines.append(
                 f"{self.df_var} = pd.read_csv('{filename}', "
