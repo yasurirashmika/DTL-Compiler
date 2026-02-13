@@ -94,12 +94,12 @@
 └─────────────────────────────────────────────────────────────────────┘
 
 
-┌─────────────────────────────────────────────────────────────────────┐
-│                        LEXER (lexer.py)                              │
-│                                                                       │
+┌────────────────────────────────────────────────────────────────────┐
+│                        LEXER (lexer.py)                            │
+│                                                                    │
 │  ┌───────────────────────────────────────────────────────────┐     │
 │  │  Lexer Class                                              │     │
-│  │  ├─ tokenize()           → Main tokenization             │     │
+│  │  ├─ tokenize()           → Main tokenization             │      │
 │  │  ├─ _tokenize_line()     → Process single line           │     │
 │  │  └─ Token recognition:                                    │     │
 │  │     • Keywords (load, filter, select, ...)               │     │
@@ -118,11 +118,11 @@
 └─────────────────────────────────────────────────────────────────────┘
 
 
-┌─────────────────────────────────────────────────────────────────────┐
-│                     PARSER (parser.py)                               │
-│                                                                       │
-│  ┌───────────────────────────────────────────────────────────┐     │
-│  │  Parser Class                                             │     │
+┌───────────────────────────────────────────────────────────────────┐
+│                     PARSER (parser.py)                            │
+│                                                                   │
+│  ┌───────────────────────────────────────────────────────────┐    │
+│  │  Parser Class                                             │    │
 │  │  ├─ parse()              → Main parsing method           │     │
 │  │  ├─ _parse_command()     → Route to specific parser      │     │
 │  │  ├─ _parse_load()        → Load command                  │     │
@@ -131,13 +131,13 @@
 │  │  ├─ _parse_sort()        → Sort command                  │     │
 │  │  ├─ _parse_save()        → Save command                  │     │
 │  │  └─ _parse_group()       → Group by command              │     │
-│  └───────────────────────────────────────────────────────────┘     │
-│                                                                       │
-│  Helper Methods:                                                     │
-│  • _peek()          → Look at current token                         │
-│  • _advance()       → Move to next token                            │
-│  • _consume()       → Expect specific token type                    │
-└─────────────────────────────────────────────────────────────────────┘
+│  └───────────────────────────────────────────────────────────┘    │
+│                                                                   │
+│  Helper Methods:                                                  │
+│  • _peek()          → Look at current token                       │
+│  • _advance()       → Move to next token                          │
+│  • _consume()       → Expect specific token type                  │
+└───────────────────────────────────────────────────────────────────┘
 
 
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -220,11 +220,11 @@
 ```
 Input DTL Script:
 ┌─────────────────────────────┐
-│ load "employees.csv"        │
+│ load "test_data/employees.csv" │
 │ filter salary > 70000       │
 │ select name, salary         │
 │ sort by salary desc         │
-│ save "output.csv"           │
+│ save "outputs/output.csv"   │
 └─────────────────────────────┘
            │
            ▼
@@ -243,11 +243,11 @@ Input DTL Script:
     PARSER PHASE
 ┌─────────────────────────────┐
 │ Program                     │
-│  ├─ LoadNode(employees.csv) │
+│  ├─ LoadNode(test_data/employees.csv) │
 │  ├─ FilterNode(salary,>,70k)│
 │  ├─ SelectNode([name,sal])  │
 │  ├─ SortNode(salary,desc)   │
-│  └─ SaveNode(output.csv)    │
+│  └─ SaveNode(outputs/output.csv)    │
 └─────────────────────────────┘
            │
            ▼
@@ -264,11 +264,11 @@ Input DTL Script:
 ┌─────────────────────────────┐
 │ import pandas as pd         │
 │                             │
-│ df = pd.read_csv(...)       │
+│ df = pd.read_csv("test_data/employees.csv") │
 │ df = df[df["salary"]>70000] │
 │ df = df[["name","salary"]]  │
 │ df = df.sort_values(...)    │
-│ df.to_csv("output.csv")     │
+│ df.to_csv("outputs/output.csv") │
 └─────────────────────────────┘
            │
            ▼
@@ -314,7 +314,7 @@ Input DTL Script:
 
 ```
 ┌────────────────────────────────────────────────┐
-│ Typical Compilation (example1.dtl)            │
+│ Typical Compilation (example1.dtl)             │
 ├────────────────────────────────────────────────┤
 │ Phase 1: Lexical Analysis      ~0.01 seconds   │
 │ Phase 2: Syntax Analysis        ~0.02 seconds  │
@@ -364,5 +364,3 @@ Execution Time: ~0.05 seconds (for 15 row CSV)
 ---
 
 **End of Architecture Diagram**
-
-For more details, see DOCUMENTATION.md
